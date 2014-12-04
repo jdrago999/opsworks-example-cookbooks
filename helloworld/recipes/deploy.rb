@@ -6,7 +6,7 @@ node[:deploy].each do |app_name, deploy|
   end
   
   bash 'deploy-stuff' do
-    code "echo date > #{deploy[:deploy_to]}/public/date.txt"
+    code "echo date > #{deploy[:deploy_to]}/current/public/date.txt"
   end
 
 
