@@ -6,7 +6,7 @@ node[:deploy].each do |app_name, deploy|
   end
   
   bash 'deploy-stuff' do
-    code "curl https://news.ycombinator.com/ > #{deploy[:deploy_to]}/public/hn.html"
+    code "echo date > #{deploy[:deploy_to]}/public/date.txt"
   end
 
 
